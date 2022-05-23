@@ -4,10 +4,9 @@ description: >
     write server applications in C++ and the NCL front-end language.
 lang: en-US
 
-domain: hakonmagnus.github.io
-url: https://hakonmagnus.github.io
-baseurl: /newton-docs/
-git_address: https://github.com/hakonmagnus/newton
+baseeurl: "/newton-docs"
+url: https://hakonmagnus.github.io/newton-docs
+git_address: https://github.com/hakonmagnus/newton-docs
 
 bootwatch: paper
 
