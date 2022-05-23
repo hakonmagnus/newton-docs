@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="header-container jumbotron">
+    <div class="container">
+        <h1>Newton C++ Web Framework</h1>
+        <p>
+            Newton is a full-stack web framework written in C++ allowing you to create compiled
+            server applications in C++ with a front-end compiled from the Newton Client Language (NCL).
+        </p>
+        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">Learn more</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <em>Site template based on <a target="_blank" href="https://github.com/aksakalli/jekyll-doc-theme">jekyll-doc-theme</a> on GitHub.</em>
+            <h2 class="header-light regular-pad">What is Newton?</h2>
+            <p class="lead">
+                Newton is an ambitious hobby project of mine when I started considering if there could
+                be a powerful server framework written in C++ allowing you to compile your web applications
+                and avoid source code interpretation on the fly. The Newton Framework leverages <a target="_blank" href="https://cmake.org/">CMake</a> as a build system for projects and can use any modern C++ compiler.
+                The Newton server application can have multiple virtual hosts, or one for 'localhost', and
+                this virtual host can have middlewares and routes. The middlewares can be programmed by you,
+                me, or someone else, and the routes can be dynamic and user-implemented to respond to the
+                HTTP request however you would like. One thing you can do with routes is return an NCL
+                front-end web application using my Newton Client Language. The NCL language compiles into
+                client-side HTML, CSS, JavaScript, and WebAssembly.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{{ "/assets/img/newton.png" | relative_url }}" alt="Newton Logo" class="img-responsive">
+        </div>
+    </div>
+</div>

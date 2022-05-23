@@ -1,0 +1,40 @@
+{% assign docs = site.data.docs | map: 'docs' | join: ',' | split: ',' %}
+
+{% for document in docs %}
+    {% assign document_url = document | prepend:"/docs/" | append:"/" %}
+    {% if document_url == page.url %}
+    <ul class="pager">
+        {% if forloop.first %}
+        <li class="previous disabled">
+            <a>
+                <span aria-hidden="true">&larr;</span> Previous
+            </a>
+        </li>
+        {% else %}
+            {% assign previous = forloop.index0 | minus: 1 %}
+            {% assign previous_page = docs[previous] | prepend:"/docs/" | append:"/" %}
+            <li class="previous">
+                <a href="{{ previous_page | relative_url }}">
+                    <span aria-hidden="true">&larr;</span> Previous
+                </a>
+            </li>
+        {% endif %}
+
+        {% if forloop.last %}
+        <li class="next disabled">
+            <a>
+                Next <span aria-hidden="true">&rarr;</span>
+            </a>
+        </li>
+        {% else %}
+        <li class="next">
+            <a href="{{ next_page | relative_url }}">
+                Next <span aria-hidden="true">&rarr;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+    <div class="clear"></div>
+    {% break %}
+    {% endif %}
+{% endfor %}
